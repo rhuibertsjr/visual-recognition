@@ -2,13 +2,15 @@
 
 pushd "%~dp0"
 
-if not exist ".\bin" mkdir ".\bin"
+if not exist ".\build" mkdir ".\build"
 if not exist ".\data" mkdir ".\data"
 
-pushd ".\bin"
+pushd ".\build"
 
-cl -Zi -nologo ..\src\visrec.cpp 
+set OPENCV_LIB="S:\human-machine-interface\visual-recognition\3rdparty\opencv\build\x64\vc16\lib"
 
-popd ".\bin"
+cl -Zi /EHsc -nologo ..\src\visrec.cpp /I ..\3rdparty\opencv\build\include /link /LIBPATH:%OPENCV_LIB% opencv_world490.lib
+
+popd ".\build"
 
 popd

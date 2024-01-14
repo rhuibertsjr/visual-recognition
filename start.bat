@@ -1,9 +1,9 @@
 @echo off
 
 pushd "%~dp0"
-pushd ".\bin"
+pushd ".\build"
 
 visrec.exe
 
-popd ".\bin"
+popd ".\build"
 popd 
