@@ -3,7 +3,7 @@
 pushd "%~dp0"
 pushd ".\build"
 
-visrec.exe
+visrec.exe ..\data\me.jpg
 
 popd ".\build"
 popd 

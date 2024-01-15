@@ -1,3 +1,4 @@
-build/
-
+build/*
 3rdparty/*
+include/*
+data/*
